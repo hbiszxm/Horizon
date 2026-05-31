@@ -160,3 +160,5 @@ class ContentAnalyzer:
         item.ai_reason = result.get("reason", "")
         item.ai_summary = result.get("summary", item.title)
         item.ai_tags = result.get("tags", [])
+        if result.get("title_zh"):
+            item.metadata["title_zh"] = str(result.get("title_zh"))

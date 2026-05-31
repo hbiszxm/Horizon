@@ -102,9 +102,27 @@ class HorizonOrchestrator:
             # Keep all items above threshold, then top up with the day's best scored items
             # until we have a practical topic pool.
             creator_min_items = 24
+            def creator_rank(item):
+                meta = item.metadata or {}
+                text = " ".join(str(x or "") for x in [
+                    item.title,
+                    item.ai_summary,
+                    meta.get("feed_name"),
+                    meta.get("category"),
+                    meta.get("subreddit"),
+                ]).lower()
+                boost = 0.0
+                if any(k in text for k in ["cn-", "中文", "量子位", "infoq", "嘶吼", "绿盟", "运维派", "华为"]):
+                    boost += 2.0
+                if any(k in text for k in ["ai", "大模型", "模型", "agent", "智能体", "安全", "漏洞", "cve", "linux", "sre", "devops", "运维", "交换机", "h3c", "huawei", "华为", "network", "网络"]):
+                    boost += 1.2
+                if item.source_type.value == "hackernews":
+                    boost -= 0.8
+                return (item.ai_score or 0) + boost
+
             scored_items = sorted(
                 [item for item in analyzed_items if item.ai_score is not None],
-                key=lambda x: x.ai_score or 0,
+                key=creator_rank,
                 reverse=True,
             )
             if len(important_items) < creator_min_items and scored_items:

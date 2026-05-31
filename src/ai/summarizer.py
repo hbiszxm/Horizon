@@ -105,7 +105,7 @@ class DailySummarizer:
             t = str(_t).replace("[", "(").replace("]", ")")
             if language == "zh":
                 t = _pangu(t)
-            score = item.ai_score or "?"
+            score = item.ai_score if item.ai_score is not None else "?"
             toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) \u2b50\ufe0f {score}/10")
         toc = "\n".join(toc_entries) + "\n\n---\n\n"
 
@@ -143,7 +143,7 @@ class DailySummarizer:
             title = str(item.metadata.get(f"title_{language}") or item.title).replace("[", "(").replace("]", ")")
             if language == "zh":
                 title = _pangu(title)
-            score = item.ai_score or "?"
+            score = item.ai_score if item.ai_score is not None else "?"
             entries.append(f"{i}. [{title}]({item.url}) \u2b50\ufe0f {score}/10")
 
         return header + "\n".join(entries)
@@ -165,7 +165,7 @@ class DailySummarizer:
         _title = item.metadata.get(f"title_{language}") or item.title
         title = str(_title).replace("[", "(").replace("]", ")")
         url = str(item.url)
-        score = item.ai_score or "?"
+        score = item.ai_score if item.ai_score is not None else "?"
         meta = item.metadata
 
         summary = (

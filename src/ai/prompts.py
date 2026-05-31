@@ -64,9 +64,10 @@ Consider:
 
 CONTENT_ANALYSIS_USER = """Analyze the following content and provide a JSON response with:
 - score (0-10): Importance score
-- reason: Brief explanation for the score (mention discussion quality if comments are provided)
-- summary: One-sentence summary of the content
-- tags: Relevant topic tags (3-5 tags)
+- title_zh: A concise Simplified Chinese headline. Translate English titles into natural Chinese.
+- reason: Brief explanation in Simplified Chinese for the score (mention discussion quality if comments are provided)
+- summary: One-sentence summary in Simplified Chinese
+- tags: Relevant topic tags in Simplified Chinese or common technical abbreviations (3-5 tags)
 
 Content:
 Title: {title}
@@ -79,9 +80,10 @@ URL: {url}
 Respond with valid JSON only:
 {{
   "score": <number>,
-  "reason": "<explanation>",
-  "summary": "<one-sentence-summary>",
-  "tags": ["<tag1>", "<tag2>", ...]
+  "title_zh": "<简体中文标题>",
+  "reason": "<中文评分理由>",
+  "summary": "<中文一句话摘要>",
+  "tags": ["<标签1>", "<标签2>", ...]
 }}"""
 
 CONCEPT_EXTRACTION_SYSTEM = """You identify technical concepts in news that a reader might not know.
