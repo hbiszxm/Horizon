@@ -98,18 +98,27 @@ class HorizonOrchestrator:
             ]
             important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
 
-            # Creator briefing fallback: a self-media daily briefing should not be empty.
-            # If no item reaches the configured threshold, keep the day's top scored items
-            # so the user still gets a useful topic pool for monitoring and creation.
-            if not important_items and analyzed_items:
-                fallback_limit = 12
-                important_items = sorted(
-                    [item for item in analyzed_items if item.ai_score is not None],
-                    key=lambda x: x.ai_score or 0,
-                    reverse=True,
-                )[:fallback_limit]
+            # Creator briefing mode: a self-media daily briefing needs enough material.
+            # Keep all items above threshold, then top up with the day's best scored items
+            # until we have a practical topic pool.
+            creator_min_items = 24
+            scored_items = sorted(
+                [item for item in analyzed_items if item.ai_score is not None],
+                key=lambda x: x.ai_score or 0,
+                reverse=True,
+            )
+            if len(important_items) < creator_min_items and scored_items:
+                selected_ids = {item.id for item in important_items}
+                for item in scored_items:
+                    if len(important_items) >= creator_min_items:
+                        break
+                    if item.id not in selected_ids:
+                        important_items.append(item)
+                        selected_ids.add(item.id)
+                important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
                 self.console.print(
-                    f"⭐️ 0 items scored ≥ {threshold}; using top {len(important_items)} scored items as creator briefing fallback\n"
+                    f"⭐️ {len([item for item in important_items if (item.ai_score or 0) >= threshold])} items scored ≥ {threshold}; "
+                    f"topped up to {len(important_items)} creator briefing items\n"
                 )
             else:
                 self.console.print(
