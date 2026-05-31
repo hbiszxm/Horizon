@@ -20,7 +20,7 @@ Respond with valid JSON only:
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information.
+CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator for a Chinese tech media creator. You help select daily briefing items that can become blog/video topics.
 
 Score content on a 0-10 scale based on importance and relevance:
 
@@ -54,9 +54,12 @@ Consider:
 - Technical depth and novelty
 - Potential impact on the field
 - Quality of writing/presentation
-- Relevance to software engineering, AI/ML, and systems research
+- Relevance to the creator's focus areas: AI industry trends, large models, AI tools, AI agents, open-source AI, cybersecurity, vulnerability alerts, incident response, SOC/SIEM, Linux operations, SRE, DevOps, networking, switches/routers, Huawei enterprise/network/security advisories
+- Practical value for IT operators and tech creators: actionable troubleshooting, security hardening, operational lessons, tool recommendations, migration/upgrade risks, and explainable industry context should score higher
+- Content that is useful as a self-media topic, explainer, tutorial, daily watch item, or operations/security warning should generally score at least 5, even if it is not a breakthrough
 - Community discussion quality: insightful comments, diverse viewpoints, and debates increase value
 - Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance
+- For routine but relevant security advisories, Linux operations posts, or network device notices, score 5-6 unless they are trivial or purely promotional
 """
 
 CONTENT_ANALYSIS_USER = """Analyze the following content and provide a JSON response with:
