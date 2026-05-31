@@ -5,22 +5,34 @@ date: 2026-05-31
 lang: zh
 ---
 
-> 从 130 条内容中筛选出 12 条重要资讯。
+> 从 124 条内容中筛选出 24 条重要资讯。
 
 ---
 
 1. [Domain expertise has always been the real moat](#item-1) ⭐️ ?/10
 2. [Shantell Sans (2023)](#item-2) ⭐️ ?/10
-3. [Microsoft Office 2019 and 2021 for Mac view-only conversion](#item-3) ⭐️ ?/10
-4. [The AV2 Video Standard Has Released (Final v1.0 Specification)](#item-4) ⭐️ ?/10
+3. [The AV2 Video Standard Has Released (Final v1.0 Specification)](#item-3) ⭐️ ?/10
+4. [Microsoft Office 2019 and 2021 for Mac view-only conversion](#item-4) ⭐️ ?/10
 5. [Accenture to acquire Ookla](#item-5) ⭐️ ?/10
 6. [Cheese Paper: a text editor specifically designed for writing](#item-6) ⭐️ ?/10
-7. [wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack](#item-7) ⭐️ ?/10
-8. [Voxel Space (2017)](#item-8) ⭐️ ?/10
-9. [Jef Raskin, the Visionary Behind the Mac (2013)](#item-9) ⭐️ ?/10
-10. [Zig: Build System Reworked](#item-10) ⭐️ ?/10
-11. [Openrsync: An implementation of rsync, by the OpenBSD team](#item-11) ⭐️ ?/10
-12. [Parallel Reconstruction of Lawful TLS Wiretapping](#item-12) ⭐️ ?/10
+7. [Voxel Space (2017)](#item-7) ⭐️ ?/10
+8. [Openrsync: An implementation of rsync, by the OpenBSD team](#item-8) ⭐️ ?/10
+9. [Zig ELF Linker Improvements Devlog](#item-9) ⭐️ ?/10
+10. [wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack](#item-10) ⭐️ ?/10
+11. [Jef Raskin, the Visionary Behind the Mac (2013)](#item-11) ⭐️ ?/10
+12. [Please Do Not Vibe Fuck Up This Software](#item-12) ⭐️ ?/10
+13. [Parallel Reconstruction of Lawful TLS Wiretapping](#item-13) ⭐️ ?/10
+14. [OpenRouter raises $113M Series B](#item-14) ⭐️ ?/10
+15. [Pandoc Templates](#item-15) ⭐️ ?/10
+16. [Show HN: 500 years of Joseon court omens as an observability dashboard](#item-16) ⭐️ ?/10
+17. [Microcode inside the Intel 8087 floating-point chip: register exchange](#item-17) ⭐️ ?/10
+18. [Dusklight – GC Twilight Princess Decompiled](#item-18) ⭐️ ?/10
+19. [Leo's first encyclical attacks technological messianism](#item-19) ⭐️ ?/10
+20. [Design Engineering Magazine](#item-20) ⭐️ ?/10
+21. [Werner Herzog in conversation with Paul Cronin (2014)](#item-21) ⭐️ ?/10
+22. [网易智企 IM 研发多智能体中心建设与实践：从单点 Agent 到研发基础设施｜AICon 上海](#item-22) ⭐️ ?/10
+23. [腾讯 PCG 质效团队技术负责人张晔确认出席 AICon 上海站，分享测试智能体驱动质量工程新范式](#item-23) ⭐️ ?/10
+24. [Quoting Karen Kwok for Reuters Breakingviews](#item-24) ⭐️ ?/10
 
 ---
 
@@ -43,20 +55,20 @@ hackernews · aleda145 · 5月30日 22:06 · [社区讨论](https://news.ycombin
 ---
 
 <a id="item-3"></a>
-## [Microsoft Office 2019 and 2021 for Mac view-only conversion](https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)) ⭐️ ?/10
-
-Microsoft Office 2019 and 2021 for Mac view-only conversion
-
-hackernews · antipurist · 5月30日 23:26 · [社区讨论](https://news.ycombinator.com/item?id=48341578)
-
----
-
-<a id="item-4"></a>
 ## [The AV2 Video Standard Has Released (Final v1.0 Specification)](https://av2.aomedia.org/) ⭐️ ?/10
 
 The AV2 Video Standard Has Released (Final v1.0 Specification)
 
 hackernews · ksec · 5月30日 21:46 · [社区讨论](https://news.ycombinator.com/item?id=48340910)
+
+---
+
+<a id="item-4"></a>
+## [Microsoft Office 2019 and 2021 for Mac view-only conversion](https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)) ⭐️ ?/10
+
+Microsoft Office 2019 and 2021 for Mac view-only conversion
+
+hackernews · antipurist · 5月30日 23:26 · [社区讨论](https://news.ycombinator.com/item?id=48341578)
 
 ---
 
@@ -79,15 +91,6 @@ hackernews · sohkamyung · 5月30日 22:58 · [社区讨论](https://news.ycomb
 ---
 
 <a id="item-7"></a>
-## [wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack](https://github.com/wolfSSL/wolfCOSE) ⭐️ ?/10
-
-wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack
-
-hackernews · aidangarske · 5月30日 20:42 · [社区讨论](https://news.ycombinator.com/item?id=48340422)
-
----
-
-<a id="item-8"></a>
 ## [Voxel Space (2017)](https://s-macke.github.io/VoxelSpace/) ⭐️ ?/10
 
 Voxel Space (2017)
@@ -96,25 +99,7 @@ hackernews · davikr · 5月30日 14:25 · [社区讨论](https://news.ycombinat
 
 ---
 
-<a id="item-9"></a>
-## [Jef Raskin, the Visionary Behind the Mac (2013)](https://lowendmac.com/2013/jef-raskin-the-visionary-behind-the-mac/) ⭐️ ?/10
-
-Jef Raskin, the Visionary Behind the Mac (2013)
-
-hackernews · tylerdane · 5月30日 19:42 · [社区讨论](https://news.ycombinator.com/item?id=48339894)
-
----
-
-<a id="item-10"></a>
-## [Zig: Build System Reworked](https://ziglang.org/devlog/2026/#2026-05-26) ⭐️ ?/10
-
-Zig: Build System Reworked
-
-hackernews · tosh · 5月30日 08:38 · [社区讨论](https://news.ycombinator.com/item?id=48334048)
-
----
-
-<a id="item-11"></a>
+<a id="item-8"></a>
 ## [Openrsync: An implementation of rsync, by the OpenBSD team](https://github.com/kristapsdz/openrsync) ⭐️ ?/10
 
 Openrsync: An implementation of rsync, by the OpenBSD team
@@ -123,11 +108,146 @@ hackernews · sph · 5月30日 10:51 · [社区讨论](https://news.ycombinator.
 
 ---
 
+<a id="item-9"></a>
+## [Zig ELF Linker Improvements Devlog](https://ziglang.org/devlog/2026/#2026-05-30) ⭐️ ?/10
+
+Zig ELF Linker Improvements Devlog
+
+hackernews · kristoff_it · 5月30日 17:29 · [社区讨论](https://news.ycombinator.com/item?id=48338673)
+
+---
+
+<a id="item-10"></a>
+## [wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack](https://github.com/wolfSSL/wolfCOSE) ⭐️ ?/10
+
+wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack
+
+hackernews · aidangarske · 5月30日 20:42 · [社区讨论](https://news.ycombinator.com/item?id=48340422)
+
+---
+
+<a id="item-11"></a>
+## [Jef Raskin, the Visionary Behind the Mac (2013)](https://lowendmac.com/2013/jef-raskin-the-visionary-behind-the-mac/) ⭐️ ?/10
+
+Jef Raskin, the Visionary Behind the Mac (2013)
+
+hackernews · tylerdane · 5月30日 19:42 · [社区讨论](https://news.ycombinator.com/item?id=48339894)
+
+---
+
 <a id="item-12"></a>
+## [Please Do Not Vibe Fuck Up This Software](https://github.com/RsyncProject/rsync/issues/929) ⭐️ ?/10
+
+Please Do Not Vibe Fuck Up This Software
+
+hackernews · justdotJS · 5月31日 03:16 · [社区讨论](https://news.ycombinator.com/item?id=48342705)
+
+---
+
+<a id="item-13"></a>
 ## [Parallel Reconstruction of Lawful TLS Wiretapping](https://remyhax.xyz/posts/reproducing-lawful-tls-wiretapping/) ⭐️ ?/10
 
 Parallel Reconstruction of Lawful TLS Wiretapping
 
 hackernews · jerrythegerbil · 5月30日 19:47 · [社区讨论](https://news.ycombinator.com/item?id=48339943)
+
+---
+
+<a id="item-14"></a>
+## [OpenRouter raises $113M Series B](https://openrouter.ai/announcements/series-b) ⭐️ ?/10
+
+OpenRouter raises $113M Series B
+
+hackernews · freeCandy · 5月30日 17:27 · [社区讨论](https://news.ycombinator.com/item?id=48338660)
+
+---
+
+<a id="item-15"></a>
+## [Pandoc Templates](https://pandoc-templates.org/) ⭐️ ?/10
+
+Pandoc Templates
+
+hackernews · ankitg12 · 5月30日 09:56 · [社区讨论](https://news.ycombinator.com/item?id=48334515)
+
+---
+
+<a id="item-16"></a>
+## [Show HN: 500 years of Joseon court omens as an observability dashboard](https://ajin.im/is/building/omen.ops/) ⭐️ ?/10
+
+Show HN: 500 years of Joseon court omens as an observability dashboard
+
+hackernews · poppypetalmask · 5月30日 19:23 · [社区讨论](https://news.ycombinator.com/item?id=48339753)
+
+---
+
+<a id="item-17"></a>
+## [Microcode inside the Intel 8087 floating-point chip: register exchange](https://www.righto.com/2026/05/microcode-inside-intel-8087-floating.html) ⭐️ ?/10
+
+Microcode inside the Intel 8087 floating-point chip: register exchange
+
+hackernews · pwg · 5月30日 17:27 · [社区讨论](https://news.ycombinator.com/item?id=48338656)
+
+---
+
+<a id="item-18"></a>
+## [Dusklight – GC Twilight Princess Decompiled](https://twilitrealm.dev/) ⭐️ ?/10
+
+Dusklight – GC Twilight Princess Decompiled
+
+hackernews · shepherdjerred · 5月30日 20:24 · [社区讨论](https://news.ycombinator.com/item?id=48340262)
+
+---
+
+<a id="item-19"></a>
+## [Leo's first encyclical attacks technological messianism](https://www.economist.com/europe/2026/05/28/leos-first-encyclical-attacks-technological-messianism) ⭐️ ?/10
+
+Leo's first encyclical attacks technological messianism
+
+hackernews · 1vuio0pswjnm7 · 5月30日 10:30 · [社区讨论](https://news.ycombinator.com/item?id=48334710)
+
+---
+
+<a id="item-20"></a>
+## [Design Engineering Magazine](https://interfaces.dev/) ⭐️ ?/10
+
+Design Engineering Magazine
+
+hackernews · hnhsh · 5月30日 20:46 · [社区讨论](https://news.ycombinator.com/item?id=48340448)
+
+---
+
+<a id="item-21"></a>
+## [Werner Herzog in conversation with Paul Cronin (2014)](https://fsgworkinprogress.com/2014/09/26/insignificant-bullets-evil-poachers-and-l-a-culture/) ⭐️ ?/10
+
+Werner Herzog in conversation with Paul Cronin (2014)
+
+hackernews · Michelangelo11 · 5月30日 16:13 · [社区讨论](https://news.ycombinator.com/item?id=48337808)
+
+---
+
+<a id="item-22"></a>
+## [网易智企 IM 研发多智能体中心建设与实践：从单点 Agent 到研发基础设施｜AICon 上海](https://www.infoq.cn/article/GlN4vSis105MkMajCcJz?utm_source=rss&utm_medium=article) ⭐️ ?/10
+
+网易智企 IM 研发多智能体中心建设与实践：从单点 Agent 到研发基础设施｜AICon 上海
+
+rss · InfoQ 中文 · 5月31日 10:00
+
+---
+
+<a id="item-23"></a>
+## [腾讯 PCG 质效团队技术负责人张晔确认出席 AICon 上海站，分享测试智能体驱动质量工程新范式](https://www.infoq.cn/article/u6lPG0uJcGuF1aSxrumc?utm_source=rss&utm_medium=article) ⭐️ ?/10
+
+腾讯 PCG 质效团队技术负责人张晔确认出席 AICon 上海站，分享测试智能体驱动质量工程新范式
+
+rss · InfoQ 中文 · 5月30日 10:00
+
+---
+
+<a id="item-24"></a>
+## [Quoting Karen Kwok for Reuters Breakingviews](https://simonwillison.net/2026/May/31/anthropic-run-rate/#atom-everything) ⭐️ ?/10
+
+Quoting Karen Kwok for Reuters Breakingviews
+
+rss · Simon Willison · 5月31日 01:48
 
 ---
