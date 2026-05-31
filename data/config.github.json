@@ -9,7 +9,10 @@
     "throttle_sec": 1.0,
     "analysis_concurrency": 2,
     "enrichment_concurrency": 1,
-    "languages": ["zh", "en"]
+    "languages": [
+      "zh",
+      "en"
+    ]
   },
   "email": {
     "enabled": false,
@@ -26,14 +29,54 @@
   },
   "sources": {
     "github": [
-      { "type": "repo_releases", "owner": "openai", "repo": "openai-python", "enabled": true },
-      { "type": "repo_releases", "owner": "anthropics", "repo": "anthropic-sdk-python", "enabled": true },
-      { "type": "repo_releases", "owner": "modelcontextprotocol", "repo": "python-sdk", "enabled": true },
-      { "type": "repo_releases", "owner": "langchain-ai", "repo": "langchain", "enabled": true },
-      { "type": "repo_releases", "owner": "microsoft", "repo": "autogen", "enabled": true },
-      { "type": "repo_releases", "owner": "ollama", "repo": "ollama", "enabled": true },
-      { "type": "repo_releases", "owner": "vllm-project", "repo": "vllm", "enabled": true },
-      { "type": "repo_releases", "owner": "huggingface", "repo": "transformers", "enabled": true }
+      {
+        "type": "repo_releases",
+        "owner": "openai",
+        "repo": "openai-python",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "anthropics",
+        "repo": "anthropic-sdk-python",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "modelcontextprotocol",
+        "repo": "python-sdk",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "langchain-ai",
+        "repo": "langchain",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "microsoft",
+        "repo": "autogen",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "ollama",
+        "repo": "ollama",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "vllm-project",
+        "repo": "vllm",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "huggingface",
+        "repo": "transformers",
+        "enabled": true
+      }
     ],
     "hackernews": {
       "enabled": true,
@@ -41,22 +84,190 @@
       "min_score": 80
     },
     "rss": [
-      { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "enabled": true, "category": "official-ai-lab" },
-      { "name": "Google DeepMind Blog", "url": "https://deepmind.google/blog/rss.xml", "enabled": true, "category": "official-ai-lab" },
-      { "name": "Google Research Blog", "url": "https://research.google/blog/rss/", "enabled": true, "category": "research" },
-      { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "enabled": true, "category": "open-source-ai" },
-      { "name": "Latent Space", "url": "https://www.latent.space/feed", "enabled": true, "category": "ai-industry" },
-      { "name": "Import AI", "url": "https://jack-clark.net/feed/", "enabled": true, "category": "ai-policy-research" },
-      { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "ai-tools" },
-      { "name": "Lilian Weng", "url": "https://lilianweng.github.io/index.xml", "enabled": true, "category": "deep-learning" }
+      {
+        "name": "OpenAI News",
+        "url": "https://openai.com/news/rss.xml",
+        "enabled": true,
+        "category": "official-ai-lab"
+      },
+      {
+        "name": "Google DeepMind Blog",
+        "url": "https://deepmind.google/blog/rss.xml",
+        "enabled": true,
+        "category": "official-ai-lab"
+      },
+      {
+        "name": "Google Research Blog",
+        "url": "https://research.google/blog/rss/",
+        "enabled": true,
+        "category": "research"
+      },
+      {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "enabled": true,
+        "category": "open-source-ai"
+      },
+      {
+        "name": "Latent Space",
+        "url": "https://www.latent.space/feed",
+        "enabled": true,
+        "category": "ai-industry"
+      },
+      {
+        "name": "Import AI",
+        "url": "https://jack-clark.net/feed/",
+        "enabled": true,
+        "category": "ai-policy-research"
+      },
+      {
+        "name": "Simon Willison",
+        "url": "https://simonwillison.net/atom/everything/",
+        "enabled": true,
+        "category": "ai-tools"
+      },
+      {
+        "name": "Lilian Weng",
+        "url": "https://lilianweng.github.io/index.xml",
+        "enabled": true,
+        "category": "deep-learning"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://feeds.feedburner.com/TheHackersNews",
+        "enabled": true,
+        "category": "cybersecurity"
+      },
+      {
+        "name": "Krebs on Security",
+        "url": "https://krebsonsecurity.com/feed/",
+        "enabled": true,
+        "category": "cybersecurity"
+      },
+      {
+        "name": "CISA Alerts",
+        "url": "https://www.cisa.gov/news.xml",
+        "enabled": true,
+        "category": "cybersecurity-advisory"
+      },
+      {
+        "name": "CISA Cybersecurity Advisories",
+        "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+        "enabled": true,
+        "category": "cybersecurity-advisory"
+      },
+      {
+        "name": "Red Hat Blog",
+        "url": "https://www.redhat.com/en/rss/blog",
+        "enabled": true,
+        "category": "linux-ops"
+      },
+      {
+        "name": "Ubuntu Blog",
+        "url": "https://ubuntu.com/blog/feed",
+        "enabled": true,
+        "category": "linux-ops"
+      },
+      {
+        "name": "Linux.com",
+        "url": "https://www.linux.com/feed/",
+        "enabled": true,
+        "category": "linux-ops"
+      },
+      {
+        "name": "LWN Headlines",
+        "url": "https://lwn.net/headlines/rss",
+        "enabled": true,
+        "category": "linux-ops"
+      },
+      {
+        "name": "Huawei PSIRT Security Bulletin",
+        "url": "https://www.huawei.com/en/rss-feeds/psirt/rss",
+        "enabled": true,
+        "category": "huawei-network-security"
+      },
+      {
+        "name": "Huawei PSIRT 安全通告",
+        "url": "https://www.huawei.com/cn/rss-feeds/psirt/rss",
+        "enabled": true,
+        "category": "huawei-network-security"
+      }
     ],
     "reddit": {
       "enabled": true,
       "subreddits": [
-        { "subreddit": "MachineLearning", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 20, "min_score": 50 },
-        { "subreddit": "LocalLLaMA", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 20, "min_score": 30 },
-        { "subreddit": "singularity", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 15, "min_score": 100 },
-        { "subreddit": "OpenAI", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 15, "min_score": 30 }
+        {
+          "subreddit": "MachineLearning",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 50
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 30
+        },
+        {
+          "subreddit": "singularity",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 100
+        },
+        {
+          "subreddit": "OpenAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 30
+        },
+        {
+          "subreddit": "cybersecurity",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 50
+        },
+        {
+          "subreddit": "netsec",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 50
+        },
+        {
+          "subreddit": "sysadmin",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 40
+        },
+        {
+          "subreddit": "linuxadmin",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 20
+        },
+        {
+          "subreddit": "networking",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 40
+        }
       ],
       "users": [],
       "fetch_comments": 5
@@ -64,13 +275,26 @@
     "telegram": {
       "enabled": true,
       "channels": [
-        { "channel": "zaihuapd", "enabled": true, "fetch_limit": 20 }
+        {
+          "channel": "zaihuapd",
+          "enabled": true,
+          "fetch_limit": 20
+        }
       ]
     },
     "twitter": {
       "enabled": false,
       "apify_token_env": "APIFY_TOKEN",
-      "users": ["sama", "gdb", "karpathy", "ylecun", "AndrewYNg", "demishassabis", "swyx", "nearcyan"],
+      "users": [
+        "sama",
+        "gdb",
+        "karpathy",
+        "ylecun",
+        "AndrewYNg",
+        "demishassabis",
+        "swyx",
+        "nearcyan"
+      ],
       "fetch_limit": 100,
       "fetch_reply_text": false,
       "max_replies_per_tweet": 3,
@@ -82,14 +306,46 @@
       "fetch_filings": false,
       "filings_provider": "sec",
       "watchlists": [
-        { "name": "ai-megacaps", "enabled": true, "provider": "yfinance", "fetch_limit": 20, "category": "ai-equities", "symbols": ["NVDA", "MSFT", "GOOGL", "META", "AMZN", "TSLA", "AMD", "AVGO"] }
+        {
+          "name": "ai-megacaps",
+          "enabled": true,
+          "provider": "yfinance",
+          "fetch_limit": 20,
+          "category": "ai-equities",
+          "symbols": [
+            "NVDA",
+            "MSFT",
+            "GOOGL",
+            "META",
+            "AMZN",
+            "TSLA",
+            "AMD",
+            "AVGO"
+          ]
+        }
       ]
     },
     "ossinsight": {
       "enabled": true,
       "period": "past_24_hours",
-      "languages": ["All", "Python", "TypeScript", "Rust", "Jupyter Notebook"],
-      "keywords": ["ai", "llm", "agent", "rag", "diffusion", "transformer", "mcp", "inference", "model"],
+      "languages": [
+        "All",
+        "Python",
+        "TypeScript",
+        "Rust",
+        "Jupyter Notebook"
+      ],
+      "keywords": [
+        "ai",
+        "llm",
+        "agent",
+        "rag",
+        "diffusion",
+        "transformer",
+        "mcp",
+        "inference",
+        "model"
+      ],
       "min_stars": 10,
       "max_items": 30
     }
@@ -106,7 +362,9 @@
     "platform": "generic",
     "layout": "markdown",
     "fallback_layout": "markdown",
-    "languages": ["zh"],
+    "languages": [
+      "zh"
+    ],
     "request_body": {
       "text": "Horizon AI Daily #{date}\n\n#{message_title}\n\n#{summary?limit=3500&split=---}"
     },
