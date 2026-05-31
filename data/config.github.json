@@ -10,8 +10,7 @@
     "analysis_concurrency": 2,
     "enrichment_concurrency": 1,
     "languages": [
-      "zh",
-      "en"
+      "zh"
     ]
   },
   "email": {
@@ -84,6 +83,36 @@
       "min_score": 80
     },
     "rss": [
+      {
+        "name": "量子位 QbitAI",
+        "url": "https://www.qbitai.com/feed",
+        "enabled": true,
+        "category": "cn-ai"
+      },
+      {
+        "name": "InfoQ 中文",
+        "url": "https://www.infoq.cn/feed.xml",
+        "enabled": true,
+        "category": "cn-tech-ai-ops"
+      },
+      {
+        "name": "嘶吼安全",
+        "url": "https://www.4hou.com/feed",
+        "enabled": true,
+        "category": "cn-cybersecurity"
+      },
+      {
+        "name": "绿盟科技技术博客",
+        "url": "https://blog.nsfocus.net/feed/",
+        "enabled": true,
+        "category": "cn-cybersecurity"
+      },
+      {
+        "name": "运维派",
+        "url": "https://www.yunweipai.com/feed",
+        "enabled": true,
+        "category": "cn-linux-ops"
+      },
       {
         "name": "OpenAI News",
         "url": "https://openai.com/news/rss.xml",
