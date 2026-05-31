@@ -90,6 +90,16 @@ class HorizonOrchestrator:
             analyzed_items = await self._analyze_content(merged_items)
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
+            failed_analysis = [
+                item for item in analyzed_items
+                if (item.ai_reason or "") in {"Analysis failed", "Analysis response parse failed"}
+            ]
+            if analyzed_items and len(failed_analysis) / len(analyzed_items) > 0.5:
+                raise RuntimeError(
+                    f"AI analysis failed for {len(failed_analysis)}/{len(analyzed_items)} items. "
+                    "Check the configured model API key/credits/rate limits before publishing."
+                )
+
             # 5. Filter by score threshold
             threshold = self.config.filtering.ai_score_threshold
             important_items = [
