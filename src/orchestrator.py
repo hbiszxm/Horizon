@@ -94,13 +94,27 @@ class HorizonOrchestrator:
             threshold = self.config.filtering.ai_score_threshold
             important_items = [
                 item for item in analyzed_items
-                if item.ai_score and item.ai_score >= threshold
+                if item.ai_score is not None and item.ai_score >= threshold
             ]
             important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
 
-            self.console.print(
-                f"⭐️ {len(important_items)} items scored ≥ {threshold}\n"
-            )
+            # Creator briefing fallback: a self-media daily briefing should not be empty.
+            # If no item reaches the configured threshold, keep the day's top scored items
+            # so the user still gets a useful topic pool for monitoring and creation.
+            if not important_items and analyzed_items:
+                fallback_limit = 12
+                important_items = sorted(
+                    [item for item in analyzed_items if item.ai_score is not None],
+                    key=lambda x: x.ai_score or 0,
+                    reverse=True,
+                )[:fallback_limit]
+                self.console.print(
+                    f"⭐️ 0 items scored ≥ {threshold}; using top {len(important_items)} scored items as creator briefing fallback\n"
+                )
+            else:
+                self.console.print(
+                    f"⭐️ {len(important_items)} items scored ≥ {threshold}\n"
+                )
 
             # 5.5 Semantic deduplication: drop items covering the same topic
             deduped_items = await self.merge_topic_duplicates(important_items)
