@@ -106,7 +106,10 @@ class DailySummarizer:
             if language == "zh":
                 t = _pangu(t)
             score = item.ai_score if item.ai_score is not None else "?"
-            toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) \u2b50\ufe0f {score}/10")
+            if language == "zh":
+                toc_entries.append(f"{i + 1}. [[#^item-{i + 1}|{t}]] ⭐️ {score}/10")
+            else:
+                toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) ⭐️ {score}/10")
         toc = "\n".join(toc_entries) + "\n\n---\n\n"
 
         parts = [self._format_item(item, labels, language, i + 1) for i, item in enumerate(items)]
@@ -215,7 +218,8 @@ class DailySummarizer:
 
         lines = [
             f'<a id="item-{index}"></a>',
-            f"## [{title}]({url}) \u2b50\ufe0f {score}/10",  # ⭐️
+            f"^item-{index}" if language == "zh" else "",
+            f"## [{title}]({url}) ⭐️ {score}/10",  # ⭐️
             "",
             summary,
             "",
