@@ -112,6 +112,7 @@ class HorizonOrchestrator:
             # Keep all items above threshold, then top up with the day's best scored items
             # until we have a practical topic pool.
             creator_min_items = 24
+            creator_max_items = 36
             def creator_rank(item):
                 meta = item.metadata or {}
                 text = " ".join(str(x or "") for x in [
@@ -151,6 +152,13 @@ class HorizonOrchestrator:
             else:
                 self.console.print(
                     f"⭐️ {len(important_items)} items scored ≥ {threshold}\n"
+                )
+
+            if len(important_items) > creator_max_items:
+                important_items = sorted(important_items, key=creator_rank, reverse=True)[:creator_max_items]
+                important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
+                self.console.print(
+                    f"🧺 Capped creator briefing to {len(important_items)} highest-priority items\n"
                 )
 
             # 5.5 Semantic deduplication: drop items covering the same topic
