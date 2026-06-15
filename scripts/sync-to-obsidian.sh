@@ -9,13 +9,11 @@ shopt -s nullglob
 # If the same date exists in both places, the later copy wins; local summaries are copied last.
 files=(daily-briefings/horizon-*-zh.md data/summaries/horizon-*-zh.md)
 
-declare -A seen=()
 count=0
 for f in "${files[@]}"; do
   [ -f "$f" ] || continue
   base="$(basename "$f")"
   cp "$f" "$TARGET/$base"
-  seen["$base"]=1
   count=$((count + 1))
 done
 
