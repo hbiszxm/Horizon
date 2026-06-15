@@ -5,19 +5,21 @@ TARGET="../AI行业与运维日报"
 mkdir -p "$TARGET"
 shopt -s nullglob
 
-# Prefer GitHub Actions archived briefings after `git pull`.
-files=(daily-briefings/horizon-*-zh.md)
-if [ ${#files[@]} -eq 0 ]; then
-  files=(data/summaries/horizon-*-zh.md)
-fi
+# Sync both GitHub Actions archived briefings and locally generated summaries.
+# If the same date exists in both places, the later copy wins; local summaries are copied last.
+files=(daily-briefings/horizon-*-zh.md data/summaries/horizon-*-zh.md)
 
+declare -A seen=()
+count=0
 for f in "${files[@]}"; do
-  cp "$f" "$TARGET/$(basename "$f")"
+  [ -f "$f" ] || continue
+  base="$(basename "$f")"
+  cp "$f" "$TARGET/$base"
+  seen["$base"]=1
+  count=$((count + 1))
 done
 
 # Convert web-style anchors to Obsidian-native block links after copying.
-# Web:      [标题](#item-1)
-# Obsidian: [[#^item-1|标题]]  + detail block marker ^item-1
 python3 - "$TARGET" <<'PY'
 from pathlib import Path
 import re
@@ -51,4 +53,4 @@ for p in target.glob('horizon-*-zh.md'):
     p.write_text(text, encoding='utf-8')
 PY
 
-printf 'Synced and Obsidian-linkified %d Horizon summaries to %s\n' "${#files[@]}" "$TARGET"
+printf 'Synced and Obsidian-linkified %d Horizon summary copies to %s\n' "$count" "$TARGET"
