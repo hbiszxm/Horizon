@@ -54,7 +54,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
           mkdir -p daily-briefings
-          cp data/summaries/horizon-${DATE}-*.md daily-briefings/ 2>/dev/null || cp data/summaries/*.md daily-briefings/
+          cp data/summaries/horizon-${DATE}-*.md daily-briefings/
           git add daily-briefings
           if ! git diff --cached --quiet; then
             git commit -m "📝 Archive Horizon briefing: ${DATE}"

@@ -3,6 +3,7 @@
 import asyncio
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from typing import List, Dict
 from urllib.parse import urlparse
 import httpx
@@ -186,7 +187,7 @@ class HorizonOrchestrator:
             await self._enrich_important_items(important_items)
 
             # 7. Generate and save daily summaries for each configured language
-            today = datetime.now().strftime("%Y-%m-%d")
+            today = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
                 summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
